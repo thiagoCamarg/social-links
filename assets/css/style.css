@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('/assets/fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --color-green: hsl(75, 94%, 57%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-grey-700: hsl(0, 0%, 20%);
+    --color-grey-800: hsl(0, 0%, 12%);
+    --color-grey-900: hsl(0, 0%, 8%);
+
+    --radius: 0.75rem;
+    --space-1: 0.625rem;
+    --space-2: 1rem;
+    --space-3: 1.25rem;
+    --space-4: 1.875rem;
+    --card-width: 20rem;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-grey-900);
+    color: var(--color-white);
+}
+
+main {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: var(--space-2);
+    text-align: center;
+}
+
+.social-wrapper {
+    width: 100%;
+    max-width: var(--card-width);
+    background-color: var(--color-grey-800);
+    padding: var(--space-4) var(--space-3);
+    border-radius: var(--radius);
+}
+
+.social-wrapper img {
+    width: 5.5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto var(--space-4);
+}
+
+.social-wrapper h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.location {
+    display: inline-block;
+    margin-bottom: var(--space-3);
+    color: var(--color-green);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.social-wrapper p {
+    margin-bottom: var(--space-3);
+    font-size: 0.875rem;
+    color: var(--color-white);
+}
+
+.social-wrapper ul {
+    list-style: none;
+    display: grid;
+    gap: var(--space-1);
+}
+
+.social-wrapper li {
+    width: 100%;
+}
+
+.social-wrapper a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    width: 100%;
+    background-color: var(--color-grey-700);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.social-wrapper a:hover,
+.social-wrapper a:focus-visible {
+    background-color: var(--color-green);
+    color: var(--color-grey-900);
+    outline: none;
+}
+
+.social-wrapper a:active {
+    transform: scale(0.98);
+}
